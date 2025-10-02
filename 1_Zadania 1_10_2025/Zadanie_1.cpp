@@ -5,7 +5,7 @@ using namespace std;
 int main(){
     int uczniowie, cukierki, wynik;
     
-    cout<< "podaj ile jest uczniów w klasie Jasia a" << endl;
+    cout<< "podaj ile jest uczniów w klasie Jasia " << endl;
     cin >> uczniowie;
 
     cout<< "podaj ilość cukierków zakupionych przez mamę" << endl;
