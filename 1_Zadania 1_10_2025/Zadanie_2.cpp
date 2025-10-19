@@ -4,7 +4,7 @@
 using namespace std;
 
 int main(){
-    int a,b,e,c,d,f,x,y,D,Dx,Dy;
+    double a,b,e,c,d,f,x,y,D,Dx,Dy;
     
     cout<< "podaj wspolczynniki pierwszego równania" << endl;
     cin >> a >> b >> e;
