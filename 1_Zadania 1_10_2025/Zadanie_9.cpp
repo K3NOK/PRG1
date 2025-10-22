@@ -18,7 +18,7 @@ int main(){
             cout << "Podana liczba jest za duża" << endl;
         }
     }
-    cout << " O_O  Udało ci się odgadnąć liczbę!  O_O" << endl;
+    cout << endl << " O_O  Udało ci się odgadnąć liczbę!  O_O" << endl << endl;
 
     return 0;
 }
