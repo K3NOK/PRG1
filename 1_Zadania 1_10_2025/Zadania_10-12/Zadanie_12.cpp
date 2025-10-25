@@ -6,16 +6,16 @@ int main(){
     int p,q,wygrana,ver;
     char proceed;
     proceed = 't';
-    cout << "wybierz wersję z której chciał byś skorzystać" <<endl<< "jeśli chcesz skorzystać z wersji z losowaniem wpisz: 1"<<endl<< "jeśli chcesz manualnie wprowadzić losy wpisz: 2"<<endl<<"wersja: ";
+    cout << "wybierz wersje z ktorej chcesz skorzystac" <<endl<< "jesli chcesz skorzystac z wersji z losowaniem wpisz: 1"<<endl<< "jesli chcesz manualnie wprowadzic losy wpisz: 2"<<endl<<"wersja: ";
     cin >> ver;
     srand(time(NULL));
     //rand() % 6 +1;
 
     if (ver == 2){
         while(proceed == 't'||proceed == 'T'){
-                cout << endl << "podaj zmienną p"<< endl;
+                cout << endl << "podaj zmienna p"<< endl;
                 cin >> p;
-                cout <<"podaj zmienną q"<< endl;
+                cout <<"podaj zmienna q"<< endl;
                 cin >> q;
                 
                 if (p % 2 == 0){
@@ -39,8 +39,9 @@ int main(){
                     wygrana += 5;
                 }
                 cout << "q= " << q << ", p = " << p << " a wygrana wynosi " << wygrana << endl;
-                cout << "czy chcesz kontynuować? t/n:";
+                cout << "czy chcesz kontynuowac? t/n:";
                 cin >> proceed;
+                system("cls");
             }
     } else if (ver == 1){
         while(proceed == 't'||proceed == 'T'){
@@ -67,11 +68,10 @@ int main(){
                     wygrana += 5;
                 }
                 cout << "q= " << q << ", p = " << p << " a wygrana wynosi " << wygrana << endl;
-                cout << "czy chcesz kontynuować? t/n:";
+                cout << "czy chcesz kontynuowac? t/n:";
                 cin >> proceed;
+                system("cls");
             }
     }
-    
-
     return 0;
 }
