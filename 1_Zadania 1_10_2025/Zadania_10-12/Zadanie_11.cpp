@@ -8,7 +8,7 @@ int main(){
 
     while (katzasz != "STOP") {
 
-        cout << "podaj kategorię zaszergowania pracownika (A/B/C/D) lub wpisz STOP aby wyłączyć program" << endl;
+        cout << "podaj kategorie zaszergowania pracownika (A/B/C/D) lub wpisz STOP aby wylaczyc program" << endl;
         cin >> katzasz;
 
         if (katzasz == "STOP") {
@@ -24,7 +24,7 @@ int main(){
         }
 
 
-        cout << "podaj liczbę przepracowanych godzin w tygodniu" << endl;
+        cout << "podaj liczbe przepracowanych godzin w tygodniu" << endl;
         cin >> przegodziny;
 
         if (przegodziny > 40.0) {
@@ -42,7 +42,7 @@ int main(){
             netto = brutto * 0.75;
         }
         
-        cout << " - - - Pracownik zarobił przez tydzien " << netto << "PLN netto lub " << brutto << "PLN brutto. - - - " << endl<<endl;
+        cout << " - - - Pracownik zarobil przez tydzien " << netto << "PLN netto lub " << brutto << "PLN brutto. - - - " << endl<<endl;
     }
     return 0;
 }
