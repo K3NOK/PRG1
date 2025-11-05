@@ -18,7 +18,7 @@ int main(){
 int n, status = 1, licznik;
 while (status == 1){
     licznik = 2;
-    cout << "Podaj liczbę naturalna 'n': ";
+    cout << "Podaj liczbe naturalna 'n': ";
     cin >> n;
     cout << "liczby pierwsze w zakresie [2...n]to: ";
     while (licznik <= n) {
