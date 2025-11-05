@@ -2,7 +2,7 @@
 using namespace std;
 
 
-bool isPrime(int liczba_sprawdzana) {
+bool Pierwsza(int liczba_sprawdzana) {
     int i;
     if (liczba_sprawdzana == 2) return true;
     if (liczba_sprawdzana % 2 == 0) return false;
@@ -22,7 +22,7 @@ while (status == 1){
     cin >> n;
     cout << "liczby pierwsze w zakresie [2...n]to: ";
     while (licznik <= n) {
-        if (isPrime(licznik) == true){
+        if (Pierwsza(licznik) == true){
             cout << licznik << " ";
         }
         licznik += 1;
