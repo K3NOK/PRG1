@@ -18,7 +18,7 @@ int main(){
             }
         }else{
             cout << znak;
-            for(k=2;k<b-2;k++){
+            for(k=1;k<(a-1);k++){
                 cout << " ";
             }
             cout << znak;
