@@ -10,7 +10,7 @@ for (int i =0;i < (słowo.length()/2);i++){
         cout<<"słowo nie jest palindromem";
         return 0;
     }
-
+    
 }
 cout <<"słowo jest palindromem"<<endl;
 

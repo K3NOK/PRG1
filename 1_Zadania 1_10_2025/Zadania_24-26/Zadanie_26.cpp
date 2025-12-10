@@ -26,7 +26,7 @@ int main() {
     }
     auto end2 = high_resolution_clock::now();
     
-    //tajm set
+    //tajmset
     auto tajm1 = duration_cast<nanoseconds>(end1 - start1).count();
     auto tajm2 = duration_cast<nanoseconds>(end2 - start2).count();
     
