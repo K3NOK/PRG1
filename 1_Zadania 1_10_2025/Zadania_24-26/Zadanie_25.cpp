@@ -10,7 +10,7 @@ int main() {
   cout << "wskaznik=" << wskaznik << endl; 
    
   //Wyświetlanie danych, na które wskazuje adres wskaźnika  
-  cout << "Adres zmienna=" << *wskaznik << endl; 
+  cout << "Adres zmienna=" << &wskaznik << endl; 
   cout << "*wskaznik=" << *wskaznik<< endl;
    
   //Modyfikacja danych, na które wskazuje wskaźnik  
