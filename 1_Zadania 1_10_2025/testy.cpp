@@ -1,38 +1,45 @@
-#include <iostream>
-#include <chrono>
-
+#include <iostream> 
 using namespace std;
-using namespace chrono;
 
+// Funkcja zamieniająca wartości wskazywane przez wskaźniki
+void zamienJesliMniejsza(int* ptr1, int* ptr2) {
+    // Sprawdzamy czy wartość wskazywana przez ptr2 jest mniejsza od wartości wskazywanej przez ptr1
+    if (*ptr2 < *ptr1) {
+        // Jeśli tak, zamieniamy wartości
+        int temp = *ptr1;  // Zapisujemy wartość z pierwszej zmiennej do zmiennej tymczasowej
+        *ptr1 = *ptr2;     // Przypisujemy wartość z drugiej zmiennej do pierwszej
+        *ptr2 = temp;      // Przypisujemy wartość tymczasową do drugiej zmiennej
+    }
+    // Jeśli warunek nie jest spełniony, nic nie robimy
+}
+
+// Funkcja główna - testowanie
 int main() {
-    int n;
-    cout << "Podaj ile elementow ma miec tablica: ";
-    cin >> n;
+    // Przykład 1: Zamiana nastąpi (5 < 10)
+    int a = 10;
+    int b = 5;
     
-    int* tab = new int[n];
+    cout << "Przed zamiana: a = " << a << ", b = " << b << endl;
+    zamienJesliMniejsza(&a, &b);
+    cout << "Po zamianie: a = " << a << ", b = " << b << endl;
+    cout << endl;
     
-    // normalnie 
-    auto start1 = high_resolution_clock::now();
-    for (int i = 0; i < n; i++) {
-        tab[i] = i + 50;
-    }
-    auto end1 = high_resolution_clock::now();
+    // Przykład 2: Zamiana NIE nastąpi (15 > 3)
+    int c = 3;
+    int d = 15;
     
-    //pntrs
-    auto start2 = high_resolution_clock::now();
-    int* ptr = tab;
-    for (int i = 0; i < n; i++) {
-        *ptr++ = i + 50;
-    }
-    auto end2 = high_resolution_clock::now();
+    cout << "Przed zamiana: c = " << c << ", d = " << d << endl;
+    zamienJesliMniejsza(&c, &d);
+    cout << "Po zamianie: c = " << c << ", d = " << d << endl;
+    cout << endl;
     
-    //tajm set
-    auto tajm1 = duration_cast<nanoseconds>(end1 - start1).count();
-    auto tajm2 = duration_cast<nanoseconds>(end2 - start2).count();
+    // Przykład 3: Zamiana NIE nastąpi (7 == 7)
+    int e = 7;
+    int f = 7;
     
-    cout << "Indeksy: " << tajm1 << " ns\n";
-    cout << "Wskazniki: " << tajm2 << " ns\n";
+    cout << "Przed zamiana: e = " << e << ", f = " << f << endl;
+    zamienJesliMniejsza(&e, &f);
+    cout << "Po zamianie: e = " << e << ", f = " << f << endl;
     
-    delete[] tab;
     return 0;
 }
