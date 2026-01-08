@@ -18,7 +18,9 @@ void czyt_dane(int A[], int &n) {
     
     cout << "Podaj zakres [a, b]: ";
     cin >> a >> b;
-    
+    if (b > a){
+        swap(a,b);
+    }
     srand(time(0));
     for (int i = 0; i < n; i++) {
         A[i] = a + rand() % (b - a + 1);
